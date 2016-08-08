@@ -1,0 +1,84 @@
+body{background:white; margin:0; padding:0;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box; }
+
+div:before,
+div:after {content:"";display:table;}
+div:after {clear:both;}
+div {zoom:1; /* For IE 6/7 (trigger hasLayout) */}
+
+.clearfix:before,
+.clearfix:after {content:"";display:table;}
+.clearfix:after {clear:both;}
+.clearfix {zoom:1; /* For IE 6/7 (trigger hasLayout) */}
+
+/*------------------------ container content---- */
+div#container{ margin:auto; width:800px;}
+
+/*------------------------ nav content---- */
+div#nav{ background:white; color:#8CC63F; width:inherit;}
+div#nav a:hover{ color:#BADD8C;}
+div#nav  h1 a{ color:#8CC63F; text-decoration:none;}
+div#nav-top{border-bottom:1px solid #B3B3B3; float:left; width:707px; margin:0 46.5px;}
+div#nav-top li, #nav-top ul{display:inline;}
+div#nav-top ul{margin-left:166px;}
+div#nav-top li a{color:#B3B3B3; text-decoration:none; font-size:16px; font-family:"Lao UI"; }
+div#nav-top li:nth-child(1){padding-right:5px; border-right:1px solid #B3B3B3;}
+div#nav-top h1{margin-top:0; display:inline; font-family:'Nulshock Rg'; font-size:36px;}
+div#nav-top input{float:right; background:#CCCCCC; font-size:14px; padding-left:7px; color:white; margin-top:14px; border-style:none; height:25px; width:186px;}
+div#nav-bot{float:left; width:707px; margin:0 46.5px;}
+div#nav-bot ul li{  display:inline;list-style:none;}
+div#nav-bot ul {padding:0; }
+div#nav-bot ul li a{color:#8CC63F;text-decoration:none; font-size:17px; margin-left:10px;font-family:"Lao UI"; text-transform:uppercase;}
+/*------------------------ slider content---- */
+div.info-sld{ background:#8CC63F; color:white; min-height:103px; border-bottom:6px solid #BADD8C;}
+div.info-sld h2{ text-align:center; font-size:40px; font-family:'GeosansLight'; margin-top:8px; margin-bottom:10px; text-transform:uppercase;}
+div.info-sld p{ text-align:center; font-size:12px; font-family:'Lao UI'; width:592px; margin:auto;margin-bottom:8px; }
+div#slider div.img-sld{ background-color:black; background-image: url("../images/weight-training.jpg"); background-position: 80%30%; min-height:271px; color:white; }
+/*------------------------ main-content ---- */
+div#main-content{ background:#F2F2F2; }
+div.section{width:671px; margin:auto; }
+div.section h2{color:white;  text-align:center;  text-transform:uppercase;  background-color:black; font-weight:normal;  
+ font-size:35px; font-family:'Lao UI'; padding:3px 7px; border-bottom:4px solid #BADD8C; min-width:200px; max-width:260px; margin-left:auto; margin-right:auto;  }
+div.videos{float:left;}
+div.videos:nth-child(even){ margin:auto 13px;}
+div#video-list .videos{display:inline-block; border: solid black 1px;}
+div#video-list .videos p{background:black; color:white; margin:0; font-family:'Lao UI'; font-size:17px; width:203px; text-align:center; padding:5px; text-transform:capitalize;}
+div#video-list .videos img{height:172px; width:213px;}
+div#hot-topics .topics{ width:666px;  margin-bottom:93px;}
+div#hot-topics .topics img{height:172px; width:213px; float:left;}
+div#hot-topics .topics  div{margin-left:24px; display:block; width:427px; float:left; height:172px;}
+div#hot-topics .topics  div p {height:103px; overflow:hidden; font-family:'Lao UI'; text-indent:5px; margin-bottom:2px;}
+div#hot-topics .topics  div p a {color:#8CC63F; text-decoration:none; font-size:19px;}
+div#hot-topics .topics  div p a:hover {text-decoration:underline; }
+div#hot-topics .topics  div p span{font-size:14px; letter-spacing:-3px; }
+div#hot-topics .topics  div ul {list-style:none; margin:0;  padding:0;}
+div#hot-topics .topics  div li { float:left; display:inline; margin-left:10px; color:#B3B3B3; font-family:'Lao UI'; font-size:12px; margin-top:-10px;}
+div#hot-topics .topics  div li span{position:relative; bottom:10px;}
+div#hot-topics .topics  div li:nth-child(2) a{background:url('../images/comment.svg'); height:30px; width:30px; display:inline-block; }
+div#hot-topics .topics  div li:nth-child(1) a{background:url('../images/share.svg');height:30px; width:30px; display:inline-block;}
+div#hot-topics .topics  div h4{font-family:'GeosansLight'; background:#8CC63F; color:white; text-transform:uppercase; text-align:center; font-weight:normal;
+margin-top:0; font-size:22px;}
+/*------------------------ footer content---- */
+div#footer{ background:#8CC63F; color:white; border-top:6px solid #BADD8C; padding: 0 29px;}
+div.foot-item {display:inline-block; height:132.4px; float:left;}
+div.foot-item:nth-last-child(1) h3{text-align:right;}
+div.foot-item:nth-child(2) h3{text-align:center;}
+div.foot-item:nth-child(2){margin:0 87px;}
+div.foot-item  input {background:#BADD8C; width:186px; border-style:none; height:25px; }
+div.foot-item  h3{font-family:"Lao UI"; font-size:16px; font-weight:normal;}
+div.foot-item li{display:inline; list-style:none;}
+div.foot-item ul{padding:0; margin:5px 0;}
+div.foot-item li a{color:white; text-decoration:none; font-family:"Lao UI"; font-size:12px;}
+div.foot-item .social-links a:nth-child(1) {background:url('../images/so_fac.svg'); display:inline-block; height:29px; width:30px;}
+div.foot-item .social-links a:nth-child(1):hover {background:url('../images/ho_fac.svg'); display:inline-block; height:29px; width:30px;}
+
+div.foot-item .social-links a:nth-child(2):hover {background:url('../images/ho_twit.svg'); display:inline-block; height:29px; width:30px;}
+div.foot-item .social-links a:nth-child(2) {background:url('../images/so_twit.svg'); display:inline-block; height:29px; width:30px;}
+
+div.foot-item .social-links a:nth-child(3) {background:url('../images/so_ins.svg'); display:inline-block; height:29px; width:30px;}
+div.foot-item .social-links a:nth-child(3):hover{background:url('../images/ho_ins.svg'); display:inline-block; height:29px; width:30px;}
+
+div.foot-item .social-links a:nth-child(4) {background:url('../images/so_pin.svg'); display:inline-block; height:29px; width:30px;}
+div.foot-item .social-links a:nth-child(4):hover {background:url('../images/ho_pin.svg'); display:inline-block; height:29px; width:30px;}

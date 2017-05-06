@@ -1,0 +1,50 @@
+
+{% include 'head'%}
+<main>
+    <div class="container">
+        <h1 > Insert</h1>
+        <div class="row ">
+            <form class="col-sm-6"  method="post">
+                <div class="input-block">
+                    <div class="fourth">
+                        <label for="first">First Name</label>
+                    </div>
+                    <div class="three-fourth">
+                        <input type="text" name="firstName" value="">
+                    </div>
+                </div>
+                <div class="input-block">
+                    <div class="fourth">
+                        <label for="last">Last Name</label>
+                    </div>
+                    <div class="three-fourth">
+                        <input type="text" name="lastName" value="">
+                    </div>
+                </div>
+                <div class="input-block">
+                    <div class="fourth">
+                        <label for="age">Age</label>
+                    </div>
+                    <div class="three-fourth">
+                        <input type="number" name="age" value="">
+                    </div>
+                </div>
+                <div class="input-block">
+                    <div class="fourth">
+                        <label for="body">Body Text</label>
+                    </div>
+                    <div class="three-fourth">
+                        <textarea class="form-control" name="body" rows="8" cols="80"></textarea>
+                    </div>
+                </div>
+                <div class="input-block">
+                    <input class="btn btn-primary" type="submit" name="" value="submit">
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</main>
+
+{% include 'footer'%}

@@ -1,0 +1,84 @@
+
+{% include 'head'%}
+<main>
+    <div class="container">
+        <h1>Update</h1>
+
+            {% if profile %}
+                <ul class="people">
+                    {% for person in profile%}
+                        <li><a href="#"  data-info="/get/{{person.firstName}}/{{person._id}}">{{person.firstName}} {{person.lastName}}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+
+        <div class="row">
+            <div id="update-info">
+                <form method="put">
+                    <div class="input-block pad-half">
+                            <label for="firstName" class="pad padH">First Name:</label>
+                            <input class="fName form-control" type="text" name="firstName" value="">
+                    </div>
+                    <div class="input-block pad-half ">
+                        <label  class="pad padH">Last Name:</label>
+                        <input class="lName form-control" type="text" name="lastName" value="">
+                    </div>
+                    <div class="input-block pad-half">
+                        <label  class="pad padH">Age:</label>
+                        <input class="age form-control" type="number" name="age" value="">
+                    </div>
+                    <button type="submit" class="btn btn-primary" >submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+<script type="text/javascript">
+    $(document).ready(function(){
+            var update = $('#update-info');
+            var c ;
+            // update.hide();
+        $('.people li a').on('click',function(){
+
+            var data = $(this).attr('data-info');
+
+            $.get(data, function(val){
+                let fname = val.firstName;
+                let lname = val.lastName;
+                let age = val.age;
+                 c = val;
+                $('#update-info .fName').val(fname);
+                $('#update-info .lName').val(lname);
+                $('#update-info .age').val(age);
+                update.fadeIn();
+
+
+            })
+
+            $('.btn').on('click', function(){
+                let sendData = {
+                    firstName: $('#update-info .fName').val(),
+                    lastName: $('#update-info .lName').val(),
+                    age:$('#update-info .age').val()
+                };
+                $.ajax({
+                    url:"/put/"+c.firstName+"/"+c._id,
+                    method:"PUT",
+                    data: sendData,
+                }).done(function(){
+                    console.log("info has been updated");
+                });
+            });
+
+        })
+
+
+
+
+    });
+</script>
+
+{% include 'footer'%}

@@ -1,0 +1,53 @@
+
+{% include 'head'%}
+<main>
+    <div class="container">
+        <h1>Delete</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Profile</th>
+                    <th>Read</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if profile %}
+                    {% for person in profile%}
+                        <tr>
+                            <td>{{person.firstName}} {{person.lastName}}</td>
+                            <td><button class="btn btn-primary" data-info="/delete/{{person.firstName}}/{{person._id}}">Delete</button></td>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
+            </tbody>
+        </table>
+
+
+    </div>
+
+</main>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $('.btn').on('click',function(){
+
+            var data = $(this).attr('data-info');
+
+            $.ajax({
+                url: data,
+                method:"DELETE"
+
+            }).done(function(){
+                console.log("Something has been deleted");
+            })
+
+            $(this).closest('tr').hide();
+        })
+
+
+
+
+    });
+</script>
+
+{% include 'footer'%}

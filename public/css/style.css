@@ -52,11 +52,12 @@ HEADER
 }
 
 #top-nav  input{
-    max-width:200px;
+    max-width:500px;
     width:100%;
     border-radius:0;
     background:#B3B3B3 ;
     color:white;
+    padding:0 1em;
 }
 
 #top-nav  button{
@@ -67,20 +68,20 @@ HEADER
     border-style:none;
 }
 
-#top-nav .third li:nth-of-type(1){
+#top-nav .login li:nth-of-type(1){
     border-right:1px solid #B3B3B3;
 }
 
-#top-nav .third li{
+#top-nav .login li{
     padding:0 10px;
 
 }
 
-#top-nav .third a{
+#top-nav .login a{
     color:#B3B3B3;
 }
 
-#top-nav .third a:hover{
+#top-nav .login a:hover{
     text-decoration:none;
 }
 
@@ -88,6 +89,11 @@ HEADER
 
 #signup{
     margin-top:25px;
+    margin-left:auto;
+}
+
+#signup form{
+    margin-left: auto;
 }
 
 /*#bottom-nav--------------------------------*/
@@ -125,6 +131,33 @@ HEADER
 
 }
 
+#bottom-nav .submenu span{
+    position:absolute;
+    top:5%;
+    right:5%;
+    padding:15px;
+    transition:all 0.3s;
+}
+
+#bottom-nav .submenu span:hover{
+    cursor:pointer;
+    background:#BADD8C;
+    color:white;
+}
+
+/*.mobile-btn--------------------------------*/
+
+.mobile-btn{
+    background:#8CC63F;
+    text-align:left;
+    font-size:24px;
+    color:white;
+}
+
+
+.mobile-btn:hover{
+    background:#BADD8C;
+}
 /*---------------------------------------
 MAIN
 ----------------------------------------*/
@@ -142,10 +175,17 @@ main{
 
 /*#slider--------------------------------*/
 
+
+#slider{
+    position:relative;
+}
+
+
 #slider .slider-text{
     background:#8CC63F;
     border-bottom: #BADD8C solid 10px;
     color:white;
+    padding-bottom:3em;
 }
 
 
@@ -154,7 +194,50 @@ main{
     text-transform:uppercase;
     font-family: Geo;
     font-size:47px;
+    transition:all 0.3s;
 }
+
+#slider .flex-control-nav{
+    bottom:5%;
+}
+
+#slider .flex-control-paging li a{
+    width:25px;
+    height:25px;
+    background:rgba(255,255,255,0.8);
+}
+
+#slider .flex-control-paging li a.flex-active{
+    background:rgba(0, 0, 0, 0.9);
+}
+
+/*#slide--------------------------------*/
+
+#slide{
+    padding:0;
+    margin:0;
+    position:relative;
+}
+
+#slide .slides{
+    display:none;
+    position:relative;
+}
+
+#slide .default-slide{
+    background:#B3B3B3;
+    min-height:800px;
+    display:flex;
+    align-items:flex-end;
+}
+
+#slide .default-slide .slider-text{
+    min-height:200px;
+    width:100%;
+
+}
+
+
 
 /*#content--------------------------------*/
 
@@ -182,7 +265,9 @@ main{
     text-align:center;
 }
 
-
+#content .topics{
+    margin-bottom: 2.5em;
+}
 
 #content .topics h4{
     font-family:Geo,sans-serif;
@@ -211,6 +296,48 @@ main{
 
 #content .stats li{
     padding:0.5em;
+}
+
+/*#blog--------------------------------*/
+
+#blog .blog-title{
+    color:white;
+    background:#8CC63F;
+    font-family: Geo , helvetica, sans-serif;
+    padding:5px 0;
+    text-align:center;
+    text-transform:uppercase;
+    font-size: 2rem;
+}
+
+#blog .blog-details span{
+    display:block;
+}
+
+#blog .blog-details a{
+    text-transform:capitalize;
+    color: black;
+    text-decoration:underline;
+
+}
+
+#blog .side-content{
+    border-bottom: 2px dotted #8CC63F;
+}
+
+#blog .side-content h3{
+    color:white;
+    padding:5px 0;
+    text-align:center;
+    background:#BADD8C;
+}
+
+#blog .side-content a{
+    color: black;
+}
+
+#blog aside{
+    margin-left:auto;
 }
 
 /*#workouts--------------------------------*/
@@ -268,7 +395,7 @@ footer{
     color:#BADD8C;
     border-style:none;
     padding:1px 12px;
-
+    z-index:3;
 }
 
 .social-links a{
@@ -287,4 +414,114 @@ footer{
 
 ul.people{
     border-bottom: 1px solid #eee;
+}
+
+/*---------------------------------------
+992
+----------------------------------------*/
+
+@media all and (max-width:992px)
+{
+    footer div.foot-item{
+        text-align:center;
+        display:flex;
+        align-items: center;
+        flex-direction:column;
+        padding:25px 0;
+    }
+
+}
+
+
+
+/*---------------------------------------
+768
+----------------------------------------*/
+
+@media all and (max-width:768px)
+{
+
+    #slider .flex-control-nav{
+        display:none;
+    }
+
+    #slider .slider-text h2{
+        font-size:35px;
+    }
+
+
+    header nav.navbar{
+        display:none;
+    }
+
+
+    header nav.navbar .submenu > ul{
+        display:none;
+    }
+
+
+    .navbar-nav .nav-item{
+        width:100%;
+    }
+
+
+    .navbar-nav.between{
+        flex-direction:column;
+    }
+
+    #logo{
+        text-align:center;
+    }
+
+
+    #signup{
+
+        margin-bottom:7px;
+    }
+
+    #signup form
+    {
+        width:inherit
+    }
+
+    #bottom-nav a{
+
+        text-align:center;
+    }
+
+    #bottom-nav .submenu > ul a{
+
+        text-align:center;
+        color:#8CC63F;
+        background:white;
+    }
+
+    #bottom-nav .submenu > ul a:hover{
+
+        background:white;
+        color:#B3B3B3;
+    }
+}
+
+
+/*---------------------------------------
+576
+----------------------------------------*/
+
+@media all and (max-width:576px)
+{
+    #signup{
+
+        margin-top:7px;
+    }
+
+
+    #top-nav .login{
+
+        margin-bottom:7px;
+        display:flex;
+        justify-content: center;
+
+    }
+
 }

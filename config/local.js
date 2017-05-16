@@ -2,6 +2,9 @@ var GLOBAL = require('./global');
 module.exports = {
 
     home:{
-        title: GLOBAL.title
+        Title: GLOBAL.title
+    },
+    article:{
+        Title: GLOBAL.title
     }
 }

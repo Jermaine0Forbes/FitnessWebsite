@@ -1,0 +1,41 @@
+
+{% include 'head'%}
+<main>
+    <section id="blog" class="container">
+        <div class="row pad padV">
+            <article class="col-md-7">
+                <h2 class="blog-title">{{art.title}}</h2>
+
+                    <div class="row">
+                        <figure class="col-sm-6">
+                            <img  class="img-fluid" src="/img/{{art.image}}" alt="">
+                        </figure>
+                        <div class="blog-details col-sm-6 pad padH">
+                            <span>By: <a href="#">{{art.author}}</a></span>
+                            <span>Date: <a href="#">{{art.date}}</a></span>
+                        </div>
+                    </div>
+                        <p>{{art.body}}</p>
+                        <p>{{art.body}}</p>
+                        <p>{{art.body}}</p>
+
+                    <div class="">
+
+                    </div>
+            </article>
+            <aside class="col-md-4 pad padH">
+                <div class="side-content">
+                    <h3>Most Recent</h3>
+                    <ul>
+                     {% for s in side%}
+                        <li><a href="/{{s.subject}}/{{s.link}}"> {{s.title}}</a></li>
+                     {% endfor %}
+                    </ul>
+                </div>
+
+            </aside>
+        </div>
+    </section>
+</main>
+
+{% include 'footer'%}

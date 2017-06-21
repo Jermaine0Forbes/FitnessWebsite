@@ -61,6 +61,5 @@ app.use(function(err,req,res){
 })
 
 app.listen(port, ip, function(){
-  // console.log(process.env)
   console.log("Server connected to port "+port)
 })

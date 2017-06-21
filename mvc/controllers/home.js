@@ -1,16 +1,12 @@
 var goose = require('mongoose');
 goose.Promise = require("bluebird");
-// var p = goose.model('Item');
 var blog = goose.model('Blog');
 var slide = goose.model('Slide');
-// var debug = require('debug');
-// var dg = debug('home:');
 var defaultData = require('../../config/local');
 
 
 
 module.exports.page = function(req,res){
-    // dg('hello world');
     var hots,slides,diets;
 
     var data = defaultData.home;
@@ -60,6 +56,5 @@ module.exports.page = function(req,res){
             // console.log(data)
             // res.render('home', data);
         })
-
 
 }

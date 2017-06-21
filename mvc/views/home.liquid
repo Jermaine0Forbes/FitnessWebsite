@@ -1,0 +1,120 @@
+
+{% include 'head.html'%}
+<main >
+    <section id="slider" >
+        <div id="slide">
+            <div class="default-slide">
+                <div class="slider-text">
+
+                </div>
+            </div>
+            {% for s in slide %}
+                <div class="slides">
+                    <div class="slider-img">
+                      <img class="img-fluid" src="img/{{s.image}}" alt="">
+                    </div>
+                    <div class="slider-text pad padV hidden-xs-down" >
+                        <div class="container">
+                            <h2 >{{s.title}}</h2>
+                            <p class="pad padH hidden-md-down">
+                                {{s.body}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section id="content" class="container">
+
+           <div  id="workouts">
+               <div class="row justify-content-center">
+                   <h2><a href="#">Workouts</a></h2>
+                   <div id="work-list" class="row fluid" >
+                       <div class="videos col-sm-4">
+                           <img  class="img-fluid" src="http://placehold.it/310x275"alt="random image">
+                           <!-- <p>How to do pushups properly</p> -->
+                       </div>
+                       <div class="videos col-sm-4">
+                           <img  class="img-fluid" src="http://placehold.it/310x275"alt="random image">
+                           <!-- <p>the benefits of weight training</p> -->
+                       </div>
+                       <div class="videos col-sm-4">
+                           <img  class="img-fluid" src="http://placehold.it/310x275"alt="random image">
+                           <!-- <p>101 things you can do with dumbbells</p> -->
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+           <div id="hot-topics">
+                   <div class="row justify-content-center">
+                       <h2><a href="#">Hot Topics</a></h2>
+                       {% for h in hot%}
+                           <div class="topics row justify-content-center">
+                               <a class="col-sm-10 col-md-4 pad padH" href="/hot-topics/{{h.year}}/{{h.month}}">
+                                   <img  class="img-fluid" alt=" a fat guy with a plate of vegetables" src="img/{{h.image}}"/>
+                               </a>
+                               <div class="col-sm-10 col-md-8 pad padH " >
+                                   <a href="/hot-topics/{{h.year}}/{{h.month}}" class="summary">
+                                       <h4>{{h.title}}</h4>
+
+                                       <p>
+                                           {{h.body}}
+                                       </p>
+                                   </a>
+                                   <div id="push-down">
+                                       <ul class="link-inline stats">
+                                           <li><a href="#"></a><i class="fa fa-plus" aria-hidden="true"></i> <span>{{h.shares}} Shares</span></li>
+                                           <li><a href="#"></a><i class="fa fa-comment" aria-hidden="true"></i> <span>{{h.comments}} Comments</span></li>
+                                           {{h.date}}
+                                       </ul>
+                                   </div>
+                               </div>
+                           </div>
+                       {% endfor %}
+
+                   </div>
+              </div>
+
+           <div id="diets">
+                   <div class="row justify-content-center">
+                       <h2><a href="#">Diets</a></h2>
+
+                       {% for d in diet %}
+                           <div class="topics row justify-content-center">
+                               <a class="col-sm-10 col-md-4 pad padH" href="/diet/{{d.slug}}">
+                                   <img  class="img-fluid" alt=" a plate of vegetables" src="img/{{d.image}}"/>
+                               </a>
+                               <div class="col-sm-10 col-md-8 pad padH " >
+                                   <a href="/diet/{{d.slug}}" class="summary">
+                                       <h4>{{d.title}}</h4>
+
+                                       <p>
+                                           {{d.body}}
+                                       </p>
+                                   </a>
+                                   <div id="push-down">
+                                       <ul class="link-inline stats">
+                                           <li><a href="#"></a><i class="fa fa-plus" aria-hidden="true"></i> <span>{{d.shares}} Shares</span></li>
+                                           <li>
+                                               <a href="#"></a>
+                                               <i class="fa fa-comment" aria-hidden="true"></i>
+                                               <span>{{d.comments}} Comments</span>
+                                               {{d.slug | safe }}{{d.month}}
+                                           </li>
+                                           {{d}}
+                                       </ul>
+                                   </div>
+                               </div>
+                           </div>
+                       {% endfor %}
+
+                   </div>
+              </div>
+
+
+    </section>
+</main>
+
+{% include 'footer.html'%}

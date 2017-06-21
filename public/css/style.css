@@ -1,0 +1,527 @@
+@font-face{ font-family:Lao; src:url(/fonts/LaoUI.ttf)}
+@font-face{ font-family:Nulshock; src:url(/fonts/nulshock bd.ttf)}
+@font-face{ font-family:Geo; src:url(/fonts/GeosansLight.ttf)}
+
+/*
+dark grey: #B3B3B3
+
+light green: #BADD8C
+
+dark green: #8CC63F
+
+light grey: #F2F2F2
+
+*/
+
+
+body{
+    font-family:Lao ,sans-serif;
+}
+
+a:active,
+a:focus,
+a:hover{
+    text-decoration:none;
+}
+
+/*---------------------------------------
+HEADER
+----------------------------------------*/
+
+/*#logo--------------------------------*/
+
+#logo{
+    margin-bottom:0;
+    margin-top:5px;
+}
+
+#logo a{
+    color:#8CC63F;
+    text-transform:capitalize;
+    font-family:"Nulshock",sans-serif;
+}
+
+#logo a:hover{
+    text-decoration:none;
+}
+
+/*#top-nav--------------------------------*/
+
+#top-nav{
+    border-bottom: 1px solid #B3B3B3;
+}
+
+#top-nav  input{
+    max-width:500px;
+    width:100%;
+    border-radius:0;
+    background:#B3B3B3 ;
+    color:white;
+    padding:0 1em;
+}
+
+#top-nav  button{
+    color:white;
+    background:#8CC63F;
+    padding:1px 12px;
+    margin-left:-5px;
+    border-style:none;
+}
+
+#top-nav .login li:nth-of-type(1){
+    border-right:1px solid #B3B3B3;
+}
+
+#top-nav .login li{
+    padding:0 10px;
+
+}
+
+#top-nav .login a{
+    color:#B3B3B3;
+}
+
+#top-nav .login a:hover{
+    text-decoration:none;
+}
+
+/*#signup--------------------------------*/
+
+#signup{
+    margin-top:25px;
+    margin-left:auto;
+}
+
+#signup form{
+    margin-left: auto;
+}
+
+/*#bottom-nav--------------------------------*/
+
+#bottom-nav a{
+    color:#8CC63F;
+    font-size:22px;
+    text-transform:uppercase;
+    font-family:Lao ,sans-serif;
+    transition:all 0.3s;
+}
+
+
+#bottom-nav a:hover{
+    color:#BADD8C;
+}
+
+#bottom-nav .submenu > ul a{
+    color:white;
+    padding:0.5em ;
+    font-size:1rem;
+    text-align:left;
+    min-width:200px;
+    background:#8CC63F;
+    transition:all 0.3s;
+    text-transform:capitalize;
+
+}
+#bottom-nav .submenu > ul a:hover{
+    background:#BADD8C;
+
+}
+
+#bottom-nav .submenu > ul li{
+
+}
+
+#bottom-nav .submenu span{
+    position:absolute;
+    top:5%;
+    right:5%;
+    padding:15px;
+    transition:all 0.3s;
+}
+
+#bottom-nav .submenu span:hover{
+    cursor:pointer;
+    background:#BADD8C;
+    color:white;
+}
+
+/*.mobile-btn--------------------------------*/
+
+.mobile-btn{
+    background:#8CC63F;
+    text-align:left;
+    font-size:24px;
+    color:white;
+}
+
+
+.mobile-btn:hover{
+    background:#BADD8C;
+}
+/*---------------------------------------
+MAIN
+----------------------------------------*/
+
+main{
+    background:#F2F2F2;
+    padding-bottom:1em;
+}
+
+#hot-topics,
+#workouts,
+#diets{
+    margin:8em 0;
+}
+
+/*#slider--------------------------------*/
+
+
+#slider{
+    position:relative;
+}
+
+
+#slider .slider-text{
+    background:#8CC63F;
+    border-bottom: #BADD8C solid 10px;
+    color:white;
+    padding-bottom:3em;
+}
+
+
+#slider .slider-text h2{
+    text-align:center;
+    text-transform:uppercase;
+    font-family: Geo;
+    font-size:47px;
+    transition:all 0.3s;
+}
+
+#slider .flex-control-nav{
+    bottom:5%;
+}
+
+#slider .flex-control-paging li a{
+    width:25px;
+    height:25px;
+    background:rgba(255,255,255,0.8);
+}
+
+#slider .flex-control-paging li a.flex-active{
+    background:rgba(0, 0, 0, 0.9);
+}
+
+/*#slide--------------------------------*/
+
+#slide{
+    padding:0;
+    margin:0;
+    position:relative;
+}
+
+#slide .slides{
+    display:none;
+    position:relative;
+}
+
+#slide .default-slide{
+    background:#B3B3B3;
+    min-height:800px;
+    display:flex;
+    align-items:flex-end;
+}
+
+#slide .default-slide .slider-text{
+    min-height:200px;
+    width:100%;
+
+}
+
+
+
+/*#content--------------------------------*/
+
+#content h2 a{
+    color:white;
+    display:inline-block;
+    border-bottom:3px solid #BADD8C;
+    background:black;
+    padding:5px 20px;
+    text-transform:uppercase;
+    font-family:Lao;
+    transition: all 0.3s;
+
+}
+
+#content h2 a:hover{
+    border-color: black;
+    background:#BADD8C;
+    padding:5px 10px;
+    text-decoration:none;
+}
+
+
+#content h2{
+    text-align:center;
+}
+
+#content .topics{
+    margin-bottom: 2.5em;
+}
+
+#content .topics h4{
+    font-family:Geo,sans-serif;
+    background:#8CC63F;
+    color:white;
+    text-transform:uppercase;
+     text-align:center;
+     font-weight:normal;
+    margin-top:0;
+    font-size:30px;
+    padding:5px 0;
+    transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -webkit-transition: background 0.5s;
+    -o-transition: background 0.5s;
+}
+
+#content .summary p{
+    color:black;
+    overflow:hidden;
+    max-height:170px;
+}
+#content .summary:hover h4{
+    background:black;
+}
+
+#content .stats li{
+    padding:0.5em;
+}
+
+/*#blog--------------------------------*/
+
+#blog .blog-title{
+    color:white;
+    background:#8CC63F;
+    font-family: Geo , helvetica, sans-serif;
+    padding:5px 0;
+    text-align:center;
+    text-transform:uppercase;
+    font-size: 2rem;
+}
+
+#blog .blog-details span{
+    display:block;
+}
+
+#blog .blog-details a{
+    text-transform:capitalize;
+    color: black;
+    text-decoration:underline;
+
+}
+
+#blog .side-content{
+    border-bottom: 2px dotted #8CC63F;
+}
+
+#blog .side-content h3{
+    color:white;
+    padding:5px 0;
+    text-align:center;
+    background:#BADD8C;
+}
+
+#blog .side-content a{
+    color: black;
+}
+
+#blog aside{
+    margin-left:auto;
+}
+
+/*#workouts--------------------------------*/
+
+#workouts .videos img{
+    margin:auto;
+    display:block;
+}
+
+/*---------------------------------------
+FOOTER
+----------------------------------------*/
+footer{
+    background:#8CC63F;
+    border-top: #BADD8C solid 10px;
+    color:white;
+}
+
+/*.foot-item--------------------------------*/
+
+.foot-item.account ul{
+    margin:0.5em 0;
+}
+
+.foot-item.account li{
+    border-right:1px solid white;
+    padding:0 5px;
+}
+
+.foot-item.account a{
+    color: white;
+    font-size:0.8rem
+}
+
+.foot-item.account ul > li:nth-last-of-type(1){
+    border-right:none;
+}
+
+.foot-item.connect{
+    text-align:center;
+}
+
+.foot-item.search{
+    text-align:right;
+
+}
+.foot-item.search input{
+    background:#BADD8C;
+    border-style:none;
+
+}
+
+.foot-item.search button{
+    background:white;
+    color:#BADD8C;
+    border-style:none;
+    padding:1px 12px;
+    z-index:3;
+}
+
+.social-links a{
+    color:black;
+    font-size:2.5rem;
+    transition:all 0.3s;
+}
+
+.social-links a:hover{
+    color:#F2F2F2;
+}
+
+#update-info{
+    display:none;
+}
+
+ul.people{
+    border-bottom: 1px solid #eee;
+}
+
+/*---------------------------------------
+992
+----------------------------------------*/
+
+@media all and (max-width:992px)
+{
+    footer div.foot-item{
+        text-align:center;
+        display:flex;
+        align-items: center;
+        flex-direction:column;
+        padding:25px 0;
+    }
+
+}
+
+
+
+/*---------------------------------------
+768
+----------------------------------------*/
+
+@media all and (max-width:768px)
+{
+
+    #slider .flex-control-nav{
+        display:none;
+    }
+
+    #slider .slider-text h2{
+        font-size:35px;
+    }
+
+
+    header nav.navbar{
+        display:none;
+    }
+
+
+    header nav.navbar .submenu > ul{
+        display:none;
+    }
+
+
+    .navbar-nav .nav-item{
+        width:100%;
+    }
+
+
+    .navbar-nav.between{
+        flex-direction:column;
+    }
+
+    #logo{
+        text-align:center;
+    }
+
+
+    #signup{
+
+        margin-bottom:7px;
+    }
+
+    #signup form
+    {
+        width:inherit
+    }
+
+    #bottom-nav a{
+
+        text-align:center;
+    }
+
+    #bottom-nav .submenu > ul a{
+
+        text-align:center;
+        color:#8CC63F;
+        background:white;
+    }
+
+    #bottom-nav .submenu > ul a:hover{
+
+        background:white;
+        color:#B3B3B3;
+    }
+}
+
+
+/*---------------------------------------
+576
+----------------------------------------*/
+
+@media all and (max-width:576px)
+{
+    #signup{
+
+        margin-top:7px;
+    }
+
+
+    #top-nav .login{
+
+        margin-bottom:7px;
+        display:flex;
+        justify-content: center;
+
+    }
+
+}

@@ -1,0 +1,57 @@
+
+{% include 'head'%}
+<main>
+    <div class="container">
+        <h1>Profile</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Profile</th>
+                    <th>Read</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if profile %}
+                    {% for person in profile%}
+                        <tr>
+                            <td>{{person.firstName}} {{person.lastName}}</td>
+                            <td><button class="btn btn-primary" data-info="/{{person.firstName}}/{{person._id}}">Read</button></td>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
+            </tbody>
+        </table>
+
+        <div class="row">
+            <div id="display-info">
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $('.btn').on('click',function(){
+
+            var data = $(this).attr('data-info');
+
+            $.get(data, function(val){
+                let name = val.name;
+                let body = val.body;
+                $('#display-info h3').html(name);
+                $('#display-info p').html(body);
+
+            })
+        })
+
+
+
+
+    });
+</script>
+
+{% include 'footer'%}

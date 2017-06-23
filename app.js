@@ -9,10 +9,15 @@ var ip = '10.132.38.98';
 // var ip = '104.236.44.154';
 var port = process.env.NODE || 8800;
 var app = express();
-var viewPath = path.join(__dirname,'mvc', 'views');
 
+
+// *** EJS CONFIGURATION ***
+var viewPath = path.join(__dirname,'mvc', 'views');
+var ejs = require('ejs');
+app.set('view engine', 'ejs');
 
  // *** LIQUID CONFIGURATION ***
+ // var viewPath = path.join(__dirname,'mvc', 'views','liquid');
 // var liquid = require('express-liquid');
 // var options = {
 //
@@ -29,14 +34,15 @@ var viewPath = path.join(__dirname,'mvc', 'views');
 
 
 // *** NUNJUCKS CONFIGURATION ***
-var jucks = require('nunjucks');
-jucks.configure(viewPath,{
-    autoescape:false,
-    express:app
-
-})
-app.engine('html', jucks.render);
-app.set('view engine', 'html');
+// var viewPath = path.join(__dirname,'mvc', 'views','html');
+// var jucks = require('nunjucks');
+// jucks.configure(viewPath,{
+//     autoescape:false,
+//     express:app
+//
+// })
+// app.engine('html', jucks.render);
+// app.set('view engine', 'html');
 
 
 app.set('views',viewPath );
@@ -49,14 +55,14 @@ app.use('/', routes);
 
 app.use(function(req,res,next){
 	if(res.status(404)){
-	  res.render('error/404');
+	  res.render('404', {Title:"page not found", msg:req.path});
 	}
 });
 
 app.use(function(err,req,res){
   if(err){
 	  var title = err;
-    res.render('error/500',{errTitle:title});
+    res.render('500',{errTitle:title});
   }
 })
 

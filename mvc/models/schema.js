@@ -14,7 +14,9 @@ var blog = new schema({
     title: String,
     body: String,
     subject: String,
-    link: String,
+    slug: String,
+    month: String,
+    year: String,
     comments:{type:Number , default:0},
     shares: {type:Number , default:0},
     image:String,
@@ -28,7 +30,9 @@ var slide = new schema({
     image:String,
     title:String,
     body:String,
-    link:String
+    slug:String,
+    month:String,
+    year:String,
 });
 
 

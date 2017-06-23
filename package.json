@@ -9,23 +9,12 @@
   "author": "jermaine forbes",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.6",
     "express": "^4.15.3",
     "express-liquid": "^0.2.6",
     "mongoose": "^4.10.7",
     "nunjucks": "^3.0.1"
-=======
-    "bluebird": "^3.5.0",
-    "body-parser": "^1.17.1",
-    "chai": "^3.5.0",
-    "cookie-parser": "^1.4.3",
-    "debug": "^2.6.3",
-    "express": "^4.15.2",
-    "express-liquid": "^0.2.6",
-    "mocha": "^3.2.0",
-    "mongoose": "^4.9.3"
->>>>>>> d46a95594ee75be02adb89788bc25fe5ba871be0
   }
 }

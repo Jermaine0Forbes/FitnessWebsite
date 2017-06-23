@@ -1,0 +1,118 @@
+
+<%- include('head')%>
+<main >
+    <section id="slider" >
+        <div id="slide">
+            <div class="default-slide">
+                <div class="slider-text">
+
+                </div>
+                
+            </div>
+        <% for (var s of slide){ %>
+                <div class="slides">
+                    <div class="slider-img">
+                      <img class="img-fluid" src="img/<%=s.image %>" alt="">
+                    </div>
+                    <div class="slider-text pad padV hidden-xs-down" >
+                        <div class="container">
+                            <h2 ><%= s.title %></h2>
+                            <p class="pad padH hidden-md-down">
+                                <%= s.body %>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </section>
+    <section id="content" class="container">
+
+           <div  id="workouts">
+               <div class="row justify-content-center">
+                   <h2><a href="#">Workouts</a></h2>
+                   <div id="work-list" class="row fluid" >
+                       <div class="videos col-sm-4">
+                           <img  class="img-fluid" src="http://placehold.it/310x275"alt="random image">
+                           <!-- <p>How to do pushups properly</p> -->
+                       </div>
+                       <div class="videos col-sm-4">
+                           <img  class="img-fluid" src="http://placehold.it/310x275"alt="random image">
+                           <!-- <p>the benefits of weight training</p> -->
+                       </div>
+                       <div class="videos col-sm-4">
+                           <img  class="img-fluid" src="http://placehold.it/310x275"alt="random image">
+                           <!-- <p>101 things you can do with dumbbells</p> -->
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+           <div id="hot-topics">
+                   <div class="row justify-content-center">
+                       <h2><a href="#">Hot Topics</a></h2>
+                       <% for(var h of hot){ %>
+                           <% var data = h;  %>
+                          <%  data = data.toObject();  %>
+                           <div class="topics row justify-content-center">
+                               <a class="col-sm-10 col-md-4 pad padH" href="/hot-topics/<%= data.year %>/<%= data.month %>/<%= data.slug %>">
+                                   <img  class="img-fluid" alt=" a fat guy with a plate of vegetables" src="img/<%= data.image %>"/>
+                               </a>
+                               <div class="col-sm-10 col-md-8 pad padH " >
+                                   <a href="/hot-topics/<%= data.year %>/<%= data.month %>/<%= data.slug %>" class="summary">
+                                       <h4><%= data.title %></h4>
+
+                                       <p>
+                                           <%= data.body %>
+                                       </p>
+                                   </a>
+                                   <div id="push-down">
+                                       <ul class="link-inline stats">
+                                           <li><a href="#"></a><i class="fa fa-plus" aria-hidden="true"></i> <span><%= data.shares %> Shares</span></li>
+                                           <li><a href="#"></a><i class="fa fa-comment" aria-hidden="true"></i> <span><%= data.comments %> Comments</span></li>
+                                       </ul>
+                                   </div>
+                               </div>
+                           </div>
+                       <% } %>
+
+                   </div>
+              </div>
+
+           <div id="diets">
+                   <div class="row justify-content-center">
+                       <h2><a href="#">Diets</a></h2>
+
+                       <% for(var d of diet){ %>
+                           <% var data = d;  %>
+                          <%  data = data.toObject();  %>
+                           <div class="topics row justify-content-center">
+                               <a class="col-sm-10 col-md-4 pad padH" href="/diet/<%= data.year %>/<%= data.month %>/<%= data.slug %>">
+                                   <img  class="img-fluid" alt=" a plate of vegetables" src="img/<%= data.image %> "/>
+                               </a>
+                               <div class="col-sm-10 col-md-8 pad padH " >
+                                   <a href="/diet/<%= data.year %>/<%= data.month %>/<%= data.slug %>" class="summary">
+                                       <h4><%= data.title %></h4>
+
+                                       <p>
+                                           <%= data.body %>
+                                       </p>
+                                   </a>
+                                   <div id="push-down">
+                                       <ul class="link-inline stats">
+                                           <li><a href="#"></a><i class="fa fa-plus" aria-hidden="true"></i> <span><%= data.shares %> Shares</span></li>
+                                           <li><a href="#"></a><i class="fa fa-comment" aria-hidden="true"></i> <span><%= data.comments %> Comments</span></li>
+                                       </ul>
+                                   </div>
+                               </div>
+                           </div>
+                       <% } %>
+
+                   </div>
+              </div>
+
+
+    </section>
+</main>
+
+<%- include('footer')%>

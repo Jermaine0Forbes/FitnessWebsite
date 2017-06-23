@@ -6,18 +6,21 @@ var profile = require('../controllers/profile');
 
 route.get('/', home.page);
 
-
+route.get('/test', function(req,res){
+    res.render('test',{ test:"this is a test"})
+})
 
 // ARTICLES FOR TOPICS LIKE HOT TOPICS, DIET, ETC
 
-route.get('/hot-topics/:name',article.page);
-route.get('/diet/:name',article.page);
+route.get('/diet/:year/:month/:slug',article.page);
+route.get('/hot-topics/:year/:month/:slug',article.page);
+
 route.get("/articles", article.update);
 
 
 
-route.get('/profile', profile.page);
-route.get('/:name/:id', profile.ajax);
+// route.get('/profile', profile.page);
+// route.get('/:name/:id', profile.ajax);
 
 
 
